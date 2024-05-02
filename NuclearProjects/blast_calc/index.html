@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuclear Blast Effects Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8 px-4 relative">
+    <h1 class="text-3xl font-bold mb-6">Nuclear Blast Effects Calculator</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="input-container">
+        <label for="yield" class="block mb-1">Bomb Yield (kilotons):</label>
+        <input type="number" id="yield" min="0" step="1" value="10" class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="input-container">
+        <label for="altitude" class="block mb-1">Detonation Altitude (meters):</label>
+        <input type="number" id="altitude" min="0" step="100" value="500" class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="input-container">
+        <label for="distance" class="block mb-1">Distance from Ground Zero (kilometers):</label>
+        <input type="number" id="distance" min="0" step="0.1" value="5" class="w-full py-2 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="md:col-span-2">
+        <button onclick="calculateEffects()" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Calculate Effects</button>
+      </div>
+    </div>
+    <div id="results" class="mt-8"></div>
+    <div class="explosion"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
